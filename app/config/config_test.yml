@@ -1,0 +1,24 @@
+parameters:
+    account.transaction.transfer.limit: 10000
+    account.transaction.transfer.service_charge: 100
+
+imports:
+    - { resource: config_dev.yml }
+
+framework:
+    test: ~
+    session:
+        storage_id: session.storage.mock_file
+    profiler:
+        collect: false
+
+web_profiler:
+    toolbar: false
+    intercept_redirects: false
+
+swiftmailer:
+    disable_delivery: true
+
+doctrine:
+  dbal:
+    dbname: '%database_name%_test'

@@ -1,0 +1,12 @@
+CoreBundle\Entity\User:
+  exclusion_policy: ALL
+  access_type: public_method
+  properties:
+    id:
+      read_only: true
+      type: string
+      groups: ['Default', 'AccountCreate']
+    name:
+      read_only: true
+      type: string
+      groups: ['Default', 'AccountCreate']

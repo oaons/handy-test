@@ -1,0 +1,15 @@
+services:
+  core.repository.user:
+    class: CoreBundle\Repository\UserRepository
+    factory: ['@doctrine', getRepository]
+    arguments: [ CoreBundle\Entity\User ]
+
+  core.repository.account:
+    class: CoreBundle\Repository\AccountRepository
+    factory: ['@doctrine', getRepository]
+    arguments: [ CoreBundle\Entity\Account ]
+
+  core.repository.transaction:
+    class: CoreBundle\Repository\TransactionRepository
+    factory: ['@doctrine', getRepository]
+    arguments: [ CoreBundle\Entity\Transaction ]

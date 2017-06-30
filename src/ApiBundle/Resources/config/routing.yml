@@ -1,0 +1,15 @@
+NelmioApiDocBundle:
+    resource:   "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix:     /api/doc
+
+api.account:
+    resource:       "@ApiBundle/Controller/AccountController.php"
+    type:           rest
+    name_prefix:    api.account.
+    prefix:         /api
+
+api.transaction:
+    resource:       "@ApiBundle/Controller/TransactionController.php"
+    type:           rest
+    name_prefix:    api.transaction.
+    prefix:         /api
